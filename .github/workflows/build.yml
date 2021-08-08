@@ -1,0 +1,25 @@
+
+
+name: build
+
+on:
+  push:
+    branches: 
+      - master
+    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: List current folder
+        run : ls -la
+
+      - name: Git clone repo
+      - uses: actions/checkout@v1
+
+      - name: List current folder after Git clone
+        run: |
+          ls -la
+          
